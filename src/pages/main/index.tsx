@@ -1,4 +1,6 @@
-const mainPortifolio = () => {
+import React from 'react';
+
+const MainPortifolio: React.FC = () => {
     return (
         <div>
             <h1>Portifolio</h1>
@@ -7,4 +9,4 @@ const mainPortifolio = () => {
     );
 }
 
-export default mainPortifolio;
+export default MainPortifolio;

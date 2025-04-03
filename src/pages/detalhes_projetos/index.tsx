@@ -1,10 +1,12 @@
-const detalhe_projetos = () => {
+import React from 'react';
+
+const DetalheProjetos: React.FC = () => {
     return (
         <div>
-        <h1>projeto</h1>
-        <p>detalhe</p>
+            <h1>projeto</h1>
+            <p>detalhe</p>
         </div>
     );
 }
 
-export default detalhe_projetos;
+export default DetalheProjetos;
