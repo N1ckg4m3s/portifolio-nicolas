@@ -1,4 +1,5 @@
 import React from 'react';
+import './detalheProjetos'
 
 const DetalheProjetos: React.FC = () => {
     return (

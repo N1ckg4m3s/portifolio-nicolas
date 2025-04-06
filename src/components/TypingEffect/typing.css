@@ -1,0 +1,12 @@
+.typing-container {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-text {
+    display: inline-block;
+    color: var(--tx-blue);
+    font-weight: bold;
+}

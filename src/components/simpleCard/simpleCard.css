@@ -1,0 +1,20 @@
+.SimpleCard {
+    width: 100px;
+    background-color: var(--bg-cardInfo);
+    border: 1px solid var(--bd-cardInfo);
+    color: white;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.SimpleCard .valorCard {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.SimpleCard .tittleCard {
+    font-weight: 100;
+    font-size: 15px;
+}

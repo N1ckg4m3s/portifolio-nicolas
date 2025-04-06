@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MainPortifolio from './pages/main';
-import DetalheProjetos from './pages/detalhes_projetos';
+import MainPortifolio from './pages/main/main';
+import DetalheProjetos from './pages/detalhes_projetos/detalheProjetos';
 
 function App() {
   return (

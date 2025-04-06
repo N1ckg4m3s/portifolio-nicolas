@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* tx = text */
+  --tx-white: white;
+  --tx-blue: #00BEFF;
+  --tx-black: black;
+
+  /* bd = border */
+  --bd-cardInfo: #0A5386;
+
+  /* bg = background */
+  --bg-fundo: #010411;
+  --bg-cardInfo: #2dc4f624;
+  --bg-footer: #1F2232;
+  --bg-textIconName: #071f32;
+
+  /* Mask */
+  --courselMask: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(92, 92, 92, 0.1) 10%,
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(92, 92, 92, 0.1) 90%,
+      rgba(255, 255, 255, 0) 100%);
+
+  --imageGradient: linear-gradient(to top,
+      rgba(0, 0, 0, 0) 0%,
+      /* transparente no topo */
+      #010411FF 100%);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto';
+  background-color: var(--bg-fundo);
+}
+
+.Flex-Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SvgWhite-stroke>path {
+  stroke: var(--tx-white);
+}
+
+.SvgWhite-fill>path {
+  fill: var(--tx-white)
 }
