@@ -9,9 +9,15 @@ import FooterBar from '../../components/footer/footer';
 import SimpleCard from '../../components/simpleCard/simpleCard';
 import Carousel from '../../components/carousel/carousel';
 import CardProjetoMain from '../../components/cardProjetoMain/cardProjetoMain';
+import EscolaridadeCard from '../../components/escolaridadeCard/escolaridadeCard';
 
 import { ReactComponent as Whatsapp } from "../../assets/icons/WhatsApp_icon.svg";
 import { ReactComponent as Email } from "../../assets/icons/Email_Icon.svg";
+import { ReactComponent as Escolaridade } from "../../assets/icons/Escolaridade_icon.svg";
+import { ReactComponent as Work } from "../../assets/icons/Work_icon.svg";
+
+
+
 import { resumoProjeto } from '../../controller/types';
 import projetoController from '../../controller/projetoController';
 
@@ -113,6 +119,57 @@ const MainPortifolio: React.FC = () => {
                     <TituloSection
                         texto={'escolaridade'}
                     />
+                    {/* <article> Aqui vai ser o selector para mobile </article> */}
+                    <article>
+                        <div className="EscolaridadeIcons">
+                            <EscolaridadeCard
+                                icon={<Escolaridade />}
+                                side={true}
+                                tempo='06/2022 - 12/2024'
+                                title='DESENVOLVIMENTO FULL-STACK  --  ESTACIO'
+                            />
+                            <EscolaridadeCard
+                                icon={<Escolaridade />}
+                                side={true}
+                                tempo='06/2022 - 12/2024'
+                                title='DESENVOLVIMENTO FULL-STACK  --  ESTACIO'
+                            />
+                        </div>
+
+                        <div className='VerticalLine'>
+                            <div className="lowLine"></div>
+                            <div className="mediumLine"></div>
+                            <div className="bigLine"></div>
+                            <div></div>
+                            <div className="bigLine"></div>
+                            <div className="mediumLine"></div>
+                            <div className="lowLine"></div>
+                        </div>
+
+                        <div className="ExperienciaIcons">
+                            <EscolaridadeCard
+                                icon={<Work />}
+                                side={false}
+                                tempo='##/## - ##/##'
+                                title='----------'
+                                subtitle='----------'
+                            />
+                            <EscolaridadeCard
+                                icon={<Work />}
+                                side={false}
+                                tempo='##/## - ##/##'
+                                title='----------'
+                                subtitle='----------'
+                            />
+                            <EscolaridadeCard
+                                icon={<Work />}
+                                side={false}
+                                tempo='##/## - ##/##'
+                                title='----------'
+                                subtitle='----------'
+                            />
+                        </div>
+                    </article>
                 </section>
 
                 <section className='infoContato'>

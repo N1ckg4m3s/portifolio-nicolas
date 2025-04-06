@@ -23,14 +23,14 @@
     border-radius: 5px;
 }
 
-.bigLine {
+.barraDecoracao>.bigLine {
     width: 15px !important;
 }
 
-.mediumLine {
+.barraDecoracao>.mediumLine {
     width: 10px !important;
 }
 
-.lowLine {
+.barraDecoracao>.lowLine {
     width: 5px !important;
 }

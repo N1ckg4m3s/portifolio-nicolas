@@ -32,6 +32,13 @@ export interface resumoProjeto {
     capa: string; // caminho da imagem
 }
 
-export interface cardResumoProjeto extends resumoProjeto{
+export interface cardResumoProjeto extends resumoProjeto {
     index: string
+}
+export interface escolaridadeProps {
+    icon: React.ReactNode,
+    side: boolean,
+    tempo: string,
+    title: string,
+    subtitle?: string,
 }

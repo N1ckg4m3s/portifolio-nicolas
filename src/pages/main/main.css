@@ -126,3 +126,47 @@ article .RedesContato>button>* {
     flex-wrap: wrap;
     gap: 15px;
 }
+
+.infoEscolaridade article {
+    gap: 10px;
+}
+
+.infoEscolaridade article>.EscolaridadeIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.infoEscolaridade article>.EscolaridadeIcons,
+.infoEscolaridade article>.ExperienciaIcons {
+    width: 100%;
+    min-width: 350px;
+}
+
+.infoEscolaridade article .VerticalLine {
+    width: 5px;
+    height: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.infoEscolaridade article .VerticalLine div {
+    background-color: var(--tx-blue);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.VerticalLine>.bigLine {
+    height: 15px !important;
+}
+
+.VerticalLine>.mediumLine {
+    height: 10px !important;
+}
+
+.VerticalLine>.lowLine {
+    height: 5px !important;
+}

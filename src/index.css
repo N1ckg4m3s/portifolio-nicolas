@@ -6,12 +6,15 @@
 
   /* bd = border */
   --bd-cardInfo: #0A5386;
+  --bd-icon: #00BEFF;
 
   /* bg = background */
+  --bg-white: #fff;
   --bg-fundo: #010411;
   --bg-cardInfo: #2dc4f624;
   --bg-footer: #1F2232;
   --bg-textIconName: #071f32;
+  --bg-escolaridadeTempo: #294B6F;
 
   /* Mask */
   --courselMask: linear-gradient(to right,
@@ -24,9 +27,9 @@
 
   --imageGradient: linear-gradient(to top,
       rgba(0, 0, 0, 0) 0%,
-      /* transparente no topo */
       #010411FF 100%);
 
+  --radial: radial-gradient(#2DC3F6, #294B6F);
 }
 
 * {
