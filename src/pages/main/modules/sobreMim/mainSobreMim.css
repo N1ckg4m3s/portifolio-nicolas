@@ -1,0 +1,10 @@
+.containerProjeto .sobreMim article .descricaoSobreMim {
+    color: var(--tx-white);
+    width: 400px;
+}
+
+.containerProjeto .sobreMim article .cardsInformacoes {
+    width: 320px;
+    flex-wrap: wrap;
+    gap: 15px;
+}

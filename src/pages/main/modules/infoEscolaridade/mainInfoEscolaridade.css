@@ -1,0 +1,109 @@
+.infoEscolaridade {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.infoEscolaridade article {
+    gap: 10px;
+}
+
+.infoEscolaridade article>.EscolaridadeIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.infoEscolaridade article>.EscolaridadeIcons,
+.infoEscolaridade article>.ExperienciaIcons {
+    width: 100%;
+    min-width: 350px;
+}
+
+.infoEscolaridade article .VerticalLine {
+    width: 5px;
+    height: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.infoEscolaridade article .VerticalLine div {
+    background-color: var(--tx-blue);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.VerticalLine>.bigLine {
+    height: 15px !important;
+}
+
+.VerticalLine>.mediumLine {
+    height: 10px !important;
+}
+
+.VerticalLine>.lowLine {
+    height: 5px !important;
+}
+
+.infoEscolaridade>.IconSelectorEscolaridade {
+    width: 100px;
+    height: 40px;
+    outline: none;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 2px
+}
+
+.infoEscolaridade>.IconSelectorEscolaridade>input[type='checkbox'] {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+}
+
+.IconSelectorEscolaridade>input[type='checkbox']:checked+.Seletor {
+    left: calc(100% - (38px + 5px));
+}
+
+.infoEscolaridade>.IconSelectorEscolaridade>.iconbox>svg path {
+    transition: .5s;
+}
+
+.infoEscolaridade>.IconSelectorEscolaridade>.secondIcon svg path {
+    fill: var(--tx-white);
+}
+
+.IconSelectorEscolaridade>input[type='checkbox']:checked+.Seletor+.firstIcon svg path {
+    fill: var(--tx-white);
+}
+
+.IconSelectorEscolaridade>input[type='checkbox']:checked+.Seletor+.firstIcon+.secondIcon svg path {
+    fill: var(--tx-black);
+}
+
+.infoEscolaridade>.IconSelectorEscolaridade>.Seletor {
+    min-width: 38px;
+    min-height: 38px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid var(--bd-icon);
+    background: var(--radial);
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    z-index: 0;
+    transition: .5s;
+}
+
+.infoEscolaridade>.IconSelectorEscolaridade>.iconbox {
+    min-width: 38px;
+    min-height: 38px;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+}

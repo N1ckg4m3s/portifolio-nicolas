@@ -1,0 +1,92 @@
+.MainContainer header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: var(--tx-white);
+}
+
+.MainContainer header>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: var(--imageGradient);
+    -webkit-mask-image: var(--imageGradient);
+}
+
+.MainContainer header article {
+    flex-direction: column;
+    z-index: 1;
+    font-size: 24px;
+    gap: 10px;
+}
+
+.MainContainer header h3 {
+    display: flex;
+    gap: 5px;
+    font-weight: 100;
+}
+
+.MainContainer header article>h2 {
+    font-weight: bold;
+    font-size: 44px;
+}
+
+.MainContainer header article>h2 span {
+    color: var(--tx-blue);
+}
+
+.MainContainer header article .RedesContato {
+    display: flex;
+    gap: 10px;
+    width: 200px;
+}
+
+article .RedesContato .infinityline {
+    width: 100%;
+    height: 1px;
+    background-color: var(--tx-white);
+}
+
+article .RedesContato>button {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--tx-white);
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+}
+
+article .RedesContato>button>* {
+    width: 16px;
+    color: var(--tx-white);
+}
+
+.MainContainer header .MaisInfoText {
+    position: absolute;
+    bottom: 20px;
+    width: 200px;
+}
+
+.MainContainer header .MaisInfoText span {
+    font-size: 20px;
+}
+
+.MaisInfoText .Linha {
+    width: 100%;
+    height: 2px;
+    background-color: var(--tx-white);
+    position: relative;
+}
+
+.MaisInfoText .Linha .Seta {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid var(--tx-white);
+}
