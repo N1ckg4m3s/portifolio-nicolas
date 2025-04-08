@@ -42,3 +42,8 @@ export interface escolaridadeProps {
     title: string,
     subtitle?: string,
 }
+export interface contatoProps {
+    icon: React.ReactNode,
+    title: string,
+    contato: string,
+}

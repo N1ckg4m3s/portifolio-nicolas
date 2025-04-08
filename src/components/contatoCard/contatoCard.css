@@ -1,0 +1,26 @@
+.contatoCard {
+    width: fit-content;
+    height: 45px;
+    display: flex;
+    margin-left: 100px;
+}
+
+.contatoCardIcon {
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.contatoCardContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-titulo {
+    font-size: 14px;
+    color: var(--tx-blue)
+}
+
+.contato-contato {
+    font-size: 14px;
+    color: var(--tx-white)
+}

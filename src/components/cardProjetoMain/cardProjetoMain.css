@@ -39,8 +39,12 @@
 .cardTitle {
     font-weight: bold;
     color: var(--tx-white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
 }
-.cardType{
+
+.cardType {
     color: var(--tx-white);
 }
 

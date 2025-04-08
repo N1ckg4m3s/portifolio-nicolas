@@ -27,7 +27,7 @@ const MainInfoProjetos: React.FC = () => {
         />
         <Carousel
             type='card'
-            maxheight={200}
+            maxheight={220}
             dadosCard={projetos}
             build={(item, index) => (<CardProjetoMain
                 index={index}
