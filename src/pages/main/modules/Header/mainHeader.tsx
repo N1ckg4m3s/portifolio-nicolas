@@ -9,7 +9,7 @@ import { ReactComponent as Whatsapp } from '../../../../assets/icons/WhatsApp_ic
 import { ReactComponent as Email } from '../../../../assets/icons/Email_Icon.svg'
 
 const mainHeader: React.FC = () => {
-    return <header className="Flex-Center">
+    return <header className="Flex-Center" id='MainHeader'>
         <img src={Fundo} alt="Imagem de fundo com tema de portfólio" />
         <article className="Flex-Center">
             <h3>Olá, visitante</h3>

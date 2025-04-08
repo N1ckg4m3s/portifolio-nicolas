@@ -53,8 +53,8 @@
     outline: none;
     position: relative;
     border: 1px solid white;
-    border-radius: 100px;
-    padding: 2px
+    border-radius: 15px;
+    padding: 2px;
 }
 
 .infoEscolaridade>.IconSelectorEscolaridade>input[type='checkbox'] {
@@ -66,7 +66,7 @@
 }
 
 .IconSelectorEscolaridade>input[type='checkbox']:checked+.Seletor {
-    left: calc(100% - (38px + 5px));
+    left: calc(100% - (38px + 4px));
 }
 
 .infoEscolaridade>.IconSelectorEscolaridade>.iconbox>svg path {
@@ -86,16 +86,14 @@
 }
 
 .infoEscolaridade>.IconSelectorEscolaridade>.Seletor {
-    min-width: 38px;
-    min-height: 38px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    min-height: 83%;
+    border-radius: 12px;
     border: 2px solid var(--bd-icon);
     background: var(--radial);
     position: absolute;
-    top: 2px;
-    left: 1px;
+    top: 5%;
+    left: 3px;
     z-index: 0;
     transition: .5s;
 }

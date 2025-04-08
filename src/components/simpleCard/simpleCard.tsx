@@ -3,7 +3,7 @@ import './simpleCard.css';
 
 interface Props {
     tittle: String;
-    value: String;
+    value: String | React.ReactNode;
 }
 
 const simpleCard: React.FC<Props> = ({ tittle, value }) => {

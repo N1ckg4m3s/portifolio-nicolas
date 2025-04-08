@@ -8,7 +8,7 @@ import { ReactComponent as Escolaridade } from "../../../../assets/icons/Escolar
 import { ReactComponent as Work } from "../../../../assets/icons/Work_icon.svg";
 
 const MainInfoEscolaridade: React.FC = () => {
-    return <section className='infoEscolaridade Flex-Center'>
+    return <section className='infoEscolaridade Flex-Center' id="MainEscolaridade">
         <TituloSection
             texto={'escolaridade'}
         />
@@ -16,10 +16,10 @@ const MainInfoEscolaridade: React.FC = () => {
         <div className='IconSelectorEscolaridade Flex-Center'>
             <input type="checkbox" />
             <div className='Seletor' />
-            <div className='iconbox Flex-Center firstIcon' style={{ left: 2 }}>
+            <div className='iconbox Flex-Center firstIcon' style={{ left: 3 }}>
                 <Escolaridade />
             </div>
-            <div className='iconbox Flex-Center secondIcon' style={{ right: 2 }}>
+            <div className='iconbox Flex-Center secondIcon' style={{ right: 3 }}>
                 <Work />
             </div>
         </div>

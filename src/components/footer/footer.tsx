@@ -15,10 +15,11 @@ const footerBar: React.FC = () => {
             <Logo className="footerLogo" />
             <div className="footer-caminhos">
                 <div className="icones-redirecionador Flex-Center">
-                    <Link to="/"><GitHub className="SvgWhite-fill" /></Link>
-                    <Link to="/"><WhatsApp className="SvgWhite-fill" /></Link>
-                    <Link to="/"><Email className="SvgWhite-stroke" /></Link>
+                    <Link to="https://github.com/N1ckg4m3s"><GitHub className="SvgWhite-fill" /></Link>
+                    <Link to="http://wa.me/5511995240558"><WhatsApp className="SvgWhite-fill" /></Link>
+                    <Link to="mailto:nico.ag.03@hotmail.com"><Email className="SvgWhite-stroke" /></Link>
                 </div>
+
                 <div className="navegacao">
                     <Link to="/">sobre</Link>
                     <Link to="/">habilidades</Link>

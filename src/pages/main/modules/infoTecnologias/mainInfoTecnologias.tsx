@@ -5,7 +5,7 @@ import TituloSection from "../../../../components/tituloSection/tituloSection";
 import Carousel from "../../../../components/carousel/carousel";
 
 const mainInfoTecnologias: React.FC = () => {
-    return <section className='infoTecnologias'>
+    return <section className='infoTecnologias' id="MainTecnologias">
         <TituloSection
             texto={'tecnologias'}
         />

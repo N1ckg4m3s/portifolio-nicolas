@@ -1,5 +1,5 @@
 nav {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     height: 42px;
@@ -21,6 +21,7 @@ nav {
     gap: 10px;
     border-radius: 50px;
     padding: 5px 35px;
+    backdrop-filter: blur(10px);
 }
 
 .nav-caminhos>* {

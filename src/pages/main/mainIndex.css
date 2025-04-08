@@ -6,6 +6,7 @@
     max-width: 1040px;
     min-width: 360px;
     width: calc(100% - 40px);
+    scroll-behavior: smooth;
 }
 
 .containerProjeto section {

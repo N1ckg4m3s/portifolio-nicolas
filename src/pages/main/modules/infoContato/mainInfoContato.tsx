@@ -9,7 +9,7 @@ import { ReactComponent as Email } from "../../../../assets/icons/Email_Icon.svg
 import { ReactComponent as Localizacao } from "../../../../assets/icons/Localizacao_icon.svg"
 
 const mainInfoContato: React.FC = () => {
-    return <section className='infoContato'>
+    return <section className='infoContato' id="MainContato">
         <TituloSection
             texto={'contato'}
         />

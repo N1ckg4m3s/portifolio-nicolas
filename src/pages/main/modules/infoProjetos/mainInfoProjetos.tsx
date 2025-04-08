@@ -21,7 +21,7 @@ const MainInfoProjetos: React.FC = () => {
         obterDados()
     }, [])
 
-    return <section className='infoProjetos'>
+    return <section className='infoProjetos' id="MainProjetos">
         <TituloSection
             texto={'projetos'}
         />
