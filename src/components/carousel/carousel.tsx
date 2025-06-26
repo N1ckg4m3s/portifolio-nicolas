@@ -39,8 +39,9 @@ const iconesMap: iconsMap = new Map([
     ['Vue.js', <Vue />],
 ]);
 
-const Carousel: React.FC<carouselProps> = ({ type, iconesEspecificos, dadosCard, build, maxheight }) => {
+const Carousel: React.FC<carouselProps> = ({ type, iconesEspecificos, dadosCard, build, maxheight, images }) => {
     const [ShouldAnimate, setShouldAnimate] = useState(false);
+    const [imagesToRender, setImagesToRender] = useState<string[]>([]);
     const [IconsToRender, setIconsToRender] = useState<string[]>([]);
     const [CardsToRender, setCardsToRender] = useState<React.ReactNode[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -58,6 +59,7 @@ const Carousel: React.FC<carouselProps> = ({ type, iconesEspecificos, dadosCard,
     useEffect(() => {
         const updateItems = () => {
             const itemsPerRow = calculateItemsPerRow();
+            const imagens = images?.length ? images : Array.from(iconesMap.keys());
             const icons = iconesEspecificos?.length ? iconesEspecificos : Array.from(iconesMap.keys());
             const cards = dadosCard ? Array.from(dadosCard.entries()).map((item, _) => {
                 const index: string = item[0];
@@ -68,13 +70,15 @@ const Carousel: React.FC<carouselProps> = ({ type, iconesEspecificos, dadosCard,
             }) : [];
 
             // Verifica se a quantidade de itens excede o número de itens que cabem na tela
-            const itemsToCheck = type === 'icons' ? icons.length : cards.length;
+            const itemsToCheck = type === 'icons' ? icons.length : type === 'images' ? imagens.length : cards.length;
             if (itemsToCheck > itemsPerRow) {
                 setShouldAnimate(true);
+                setImagesToRender([...imagens, ...imagens]); // Duplicar ícones ou cards
                 setIconsToRender([...icons, ...icons]); // Duplicar ícones ou cards
                 setCardsToRender([...cards, ...cards]); // Duplicar também os cards
             } else {
                 setShouldAnimate(false);
+                setImagesToRender(imagens);
                 setIconsToRender(icons);
                 setCardsToRender(cards);
             }
@@ -104,13 +108,21 @@ const Carousel: React.FC<carouselProps> = ({ type, iconesEspecificos, dadosCard,
                             </div>
                         ))}
                     </>
-                ) : (
-                    <>
-                        {CardsToRender}
-                    </>
-                )}
+                ) :
+                    type === 'images' ? (
+                        <>
+                            {imagesToRender.map((imgUrl, index) => (
+                                <img className="curselImage" key={index} src={require(`../../assets/Images/${imgUrl}`)} alt="" />
+                            ))}
+                        </>
+                    ) :
+                        (
+                            <>
+                                {CardsToRender}
+                            </>
+                        )}
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -12,16 +12,16 @@ const mainHeader: React.FC = () => {
     return <header className="Flex-Center" id='MainHeader'>
         <img src={Fundo} alt="Imagem de fundo com tema de portfólio" />
         <article className="Flex-Center">
-            <h3>Olá, visitante</h3>
-            <h2>Meu nome é <span>Nicolas</span></h2>
-            <h3>Desenvolvedor  <TypingEffect /></h3>
+            <h3  >Olá, visitante</h3>
+            <h2 >Meu nome é <span>Nicolas</span></h2>
+            <h3 >Desenvolvedor  <TypingEffect /></h3>
 
             <div className="RedesContato Flex-Center">
                 <div className="infinityline"></div>
                 <button className="Flex-Center">
                     <Whatsapp className="SvgWhite-fill" />
                 </button>
-                <button className="Flex-Center">
+                <button className="Flex-Center"> 
                     <Email className="SvgWhite-stroke" />
                 </button>
                 <div className="infinityline"></div>

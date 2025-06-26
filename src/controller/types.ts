@@ -1,5 +1,6 @@
 export interface carouselProps {
-    type: 'icons' | 'card'; // Tipo de conteúdo (ícones ou cards)
+    type: 'icons' | 'card' | 'images'; // Tipo de conteúdo (ícones ou cards)
+    images?: string[]; // Caminho das imagens
     iconesEspecificos?: string[]; // Lista de ícones específicos (se fornecida)
     dadosCard?: Map<string, resumoProjeto>; // Dados para construir os cards
     build?: (item: resumoProjeto, index: string) => React.ReactNode; // Função para construir cards
@@ -33,7 +34,8 @@ export interface resumoProjeto {
 }
 
 export interface cardResumoProjeto extends resumoProjeto {
-    index: string
+    index: string,
+    click: boolean
 }
 export interface escolaridadeProps {
     icon: React.ReactNode,

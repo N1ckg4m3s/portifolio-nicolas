@@ -13,8 +13,21 @@
             "Figma"
         ],
         "imagens": [
+            "DefaultImage.png",
+            "DefaultImage.png",
+            "DefaultImage.png",
+            "DefaultImage.png",
+            "DefaultImage.png",
+            "DefaultImage.png",
+            "DefaultImage.png",
+            "DefaultImage.png",
+            "DefaultImage.png",
             "DefaultImage.png"
-        ]
+        ],
+        "tempo": "1 sem.",
+        "responsivo": true,
+        "dificuldade": "5",
+        "linkRepósitorio": ""
     },
     "teste2": {
         "nome": "Teste",

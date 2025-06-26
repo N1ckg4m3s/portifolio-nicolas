@@ -1,16 +1,20 @@
+/* Estrutura Principal */
 .infoEscolaridade {
-    flex-direction: column;
-    gap: 5px;
-}
-
-.infoEscolaridade article {
-    gap: 10px;
-}
-
-.infoEscolaridade article>.EscolaridadeIcons {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
+    gap: 5px;
+    min-width: 380px;
+}
+
+.articleEscolaridadeExperiencia {
+    width: 100%;
+}
+
+/* Artigos */
+.infoEscolaridade article {
+    display: flex;
+    gap: 10px;
 }
 
 .infoEscolaridade article>.EscolaridadeIcons,
@@ -19,19 +23,23 @@
     min-width: 350px;
 }
 
-.infoEscolaridade article .VerticalLine {
-    width: 5px;
-    height: 100%;
+.infoEscolaridade article>.EscolaridadeIcons {
     display: flex;
-    height: auto;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Linha Vertical */
+.infoEscolaridade article .VerticalLine {
+    display: flex;
     flex-direction: column;
     gap: 3px;
+    width: 5px;
 }
 
 .infoEscolaridade article .VerticalLine div {
     background-color: var(--tx-blue);
     width: 100%;
-    height: 100%;
     border-radius: 5px;
 }
 
@@ -47,34 +55,58 @@
     height: 5px !important;
 }
 
+/* Seletor de Ícones */
 .infoEscolaridade>.IconSelectorEscolaridade {
     width: 100px;
     height: 40px;
-    outline: none;
     position: relative;
     border: 1px solid white;
     border-radius: 15px;
     padding: 2px;
+    outline: none;
+    display: none;
 }
 
 .infoEscolaridade>.IconSelectorEscolaridade>input[type='checkbox'] {
     width: 100%;
     height: 100%;
+    position: absolute;
     z-index: 2;
     opacity: 0;
-    position: absolute;
+    cursor: pointer;
 }
 
-.IconSelectorEscolaridade>input[type='checkbox']:checked+.Seletor {
-    left: calc(100% - (38px + 4px));
+.infoEscolaridade>.IconSelectorEscolaridade>.Seletor {
+    position: absolute;
+    top: 5%;
+    left: 3px;
+    z-index: 0;
+    aspect-ratio: 1 / 1;
+    min-height: 83%;
+    border: 2px solid var(--bd-icon);
+    border-radius: 12px;
+    background: var(--radial);
+    transition: 0.5s;
+}
+
+.infoEscolaridade>.IconSelectorEscolaridade>.iconbox {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
 }
 
 .infoEscolaridade>.IconSelectorEscolaridade>.iconbox>svg path {
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .infoEscolaridade>.IconSelectorEscolaridade>.secondIcon svg path {
     fill: var(--tx-white);
+}
+
+.IconSelectorEscolaridade>input[type='checkbox']:checked+.Seletor {
+    left: calc(100% - (38px + 4px));
 }
 
 .IconSelectorEscolaridade>input[type='checkbox']:checked+.Seletor+.firstIcon svg path {
@@ -85,23 +117,49 @@
     fill: var(--tx-black);
 }
 
-.infoEscolaridade>.IconSelectorEscolaridade>.Seletor {
-    aspect-ratio: 1 / 1;
-    min-height: 83%;
-    border-radius: 12px;
-    border: 2px solid var(--bd-icon);
-    background: var(--radial);
-    position: absolute;
-    top: 5%;
-    left: 3px;
-    z-index: 0;
-    transition: .5s;
-}
+/* Responsividade */
+@media screen and (max-width: 800px) {
+    .VerticalLine {
+        display: none !important;
+    }
 
-.infoEscolaridade>.IconSelectorEscolaridade>.iconbox {
-    min-width: 38px;
-    min-height: 38px;
-    width: 38px;
-    height: 38px;
-    position: absolute;
+    .infoEscolaridade>.IconSelectorEscolaridade {
+        display: inline;
+        transform: translateX(-50%);
+        margin-left: 50%;
+    }
+
+    .articleEscolaridadeExperiencia {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .articleEscolaridadeExperiencia>.EscolaridadeIcons {
+        width: fit-content !important;
+        margin-right: 20px;
+        overflow: hidden;
+        transition: .2s;
+    }
+
+    .articleEscolaridadeExperiencia>.ExperienciaIcons {
+        width: 0 !important;
+        min-width: 0 !important;
+        overflow: hidden;
+        transition: .2s;
+    }
+
+    /* Toggle: Experiência */
+    .infoEscolaridade>.IconSelectorEscolaridade:has(input[type='checkbox']:checked)+.articleEscolaridadeExperiencia {
+        justify-content: flex-start !important;
+    }
+
+    .infoEscolaridade>.IconSelectorEscolaridade:has(input[type='checkbox']:checked)+.articleEscolaridadeExperiencia>.EscolaridadeIcons {
+        width: 0 !important;
+        min-width: 0 !important;
+    }
+
+    .infoEscolaridade>.IconSelectorEscolaridade:has(input[type='checkbox']:checked)+.articleEscolaridadeExperiencia>.ExperienciaIcons {
+        width: fit-content !important;
+        margin-left: 20px;
+    }
 }

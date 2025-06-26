@@ -1,0 +1,11 @@
+.DetalheHeader {
+    width: 100%;
+    margin-top: 100px;
+    color: var(--tx-white);
+    flex-direction: column;
+}
+
+.DetalheHeader h5 {
+    margin-top: 15px;
+    font-weight: lighter;
+}

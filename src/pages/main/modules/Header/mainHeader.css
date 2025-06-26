@@ -1,3 +1,4 @@
+/* Header principal */
 .MainContainer header {
     position: relative;
     width: 100%;
@@ -5,6 +6,7 @@
     color: var(--tx-white);
 }
 
+/* Imagem de fundo com máscara */
 .MainContainer header>img {
     position: absolute;
     width: 100%;
@@ -14,11 +16,22 @@
     -webkit-mask-image: var(--imageGradient);
 }
 
+/* Conteúdo do artigo */
 .MainContainer header article {
+    display: flex;
     flex-direction: column;
-    z-index: 1;
-    font-size: 24px;
     gap: 10px;
+    font-size: clamp(20px, 2vw, 24px);
+    z-index: 1;
+}
+
+.MainContainer header article>h2 {
+    font-size: clamp(35px, 4vw, 48px);
+    font-weight: bold;
+}
+
+.MainContainer header article>h2 span {
+    color: var(--tx-blue);
 }
 
 .MainContainer header h3 {
@@ -27,15 +40,7 @@
     font-weight: 100;
 }
 
-.MainContainer header article>h2 {
-    font-weight: bold;
-    font-size: 44px;
-}
-
-.MainContainer header article>h2 span {
-    color: var(--tx-blue);
-}
-
+/* Contatos/redes sociais */
 .MainContainer header article .RedesContato {
     display: flex;
     gap: 10px;
@@ -50,12 +55,11 @@ article .RedesContato .infinityline {
 
 article .RedesContato>button {
     background-color: transparent;
-    border-radius: 5px;
     border: 1px solid var(--tx-white);
+    border-radius: 5px;
     width: 25px;
     height: 25px;
-    min-width: 25px;
-    min-height: 25px;
+    aspect-ratio: 11;
 }
 
 article .RedesContato>button>* {
@@ -63,6 +67,7 @@ article .RedesContato>button>* {
     color: var(--tx-white);
 }
 
+/* Texto com seta "Mais Info" */
 .MainContainer header .MaisInfoText {
     position: absolute;
     bottom: 20px;
@@ -74,10 +79,10 @@ article .RedesContato>button>* {
 }
 
 .MaisInfoText .Linha {
+    position: relative;
     width: 100%;
     height: 2px;
     background-color: var(--tx-white);
-    position: relative;
 }
 
 .MaisInfoText .Linha .Seta {

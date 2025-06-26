@@ -1,0 +1,26 @@
+.DetalheSobre {
+    flex-direction: column;
+}
+
+.DetalheSobre article .descricoesSobre {
+    display: flex;
+    flex-direction: column;
+    color: var(--tx-white)
+}
+
+.DetalheSobre article .cardsInformacoes {
+    width: 320px;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-self: center;
+}
+
+.DetalheSobre .tituloSelection {
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 550px) {
+    .DetalheSobre article {
+        flex-direction: column;
+    }
+}

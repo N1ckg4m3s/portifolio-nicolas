@@ -30,6 +30,8 @@ const MainInfoProjetos: React.FC = () => {
             maxheight={220}
             dadosCard={projetos}
             build={(item, index) => (<CardProjetoMain
+                key={index}
+                click={true}
                 index={index}
                 capa={item.capa}
                 nome={item.nome}

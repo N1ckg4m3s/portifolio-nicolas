@@ -24,7 +24,7 @@ const MainInfoEscolaridade: React.FC = () => {
             </div>
         </div>
 
-        <article className=''>
+        <article className='articleEscolaridadeExperiencia'>
             <div className="EscolaridadeIcons">
                 <EscolaridadeCard
                     icon={<Escolaridade />}

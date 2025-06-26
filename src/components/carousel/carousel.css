@@ -23,6 +23,7 @@
 }
 
 .iconItem {
+    cursor: help;
     position: relative;
     background-color: var(--bg-fundo);
 }
@@ -59,4 +60,12 @@
     padding: 5px 10px;
     border-radius: 10px;
     text-transform: uppercase;
+}
+
+.curselImage {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 5px;
 }

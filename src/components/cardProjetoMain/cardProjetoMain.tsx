@@ -7,7 +7,7 @@ const CardProjetoMain: React.FC<cardResumoProjeto> = ({ index, nome, capa, type 
     const navigate = useNavigate();
 
     const hoverClick = () => {
-        navigate(`/detalhes-projeto/${index}`);
+        navigate(`/detalhes-projeto?projeto=${index}`);
     };
 
     return (

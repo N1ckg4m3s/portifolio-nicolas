@@ -10,6 +10,12 @@ footer .footerLogo {
     width: auto;
 }
 
+footer .footer-caminhos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 footer .footer-caminhos .icones-redirecionador {
     justify-content: space-around;
 }
@@ -18,12 +24,22 @@ footer .footer-caminhos .icones-redirecionador a>* {
     width: 35px;
     height: 35px;
 }
-footer .footer-caminhos .navegacao{
+
+footer .footer-caminhos .navegacao {
     display: flex;
     gap: 10px;
 }
+
 footer .footer-caminhos .navegacao>* {
     text-decoration: none;
     color: var(--tx-white);
     text-transform: uppercase;
+}
+
+@media screen and (max-width:500px) {
+    footer {
+        flex-direction: column !important;
+        gap: 20px;
+        padding: 20px;
+    }
 }
