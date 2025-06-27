@@ -5,7 +5,11 @@ import { ReactComponent as Logo } from '../../assets/icons/Logo_icon.svg';
 import { ReactComponent as Menu } from '../../assets/icons/menuIcon.svg';
 import { useNavigate } from "react-router-dom";
 
-const NavBar: React.FC = () => {
+interface props {
+    redirecionador: Record<string, string>
+}
+
+const NavBar: React.FC<props> = ({ redirecionador }) => {
     const navigate = useNavigate();
     return (
         <nav>
@@ -18,13 +22,14 @@ const NavBar: React.FC = () => {
                 <Menu />
             </div>
 
-            <div className="nav-caminhos">
-                <a href="#MainSobre">sobre</a>
-                <a href="#MainTecnologias">Tecnologias</a>
-                <a href="/projetos">projetos</a>
-                <a href="#MainEscolaridade">estudos</a>
-                <a href="#MainContato">contato</a>
-            </div>
+            {Object.entries(redirecionador).length > 0 ?
+                <div className="nav-caminhos">
+                    {Object.entries(redirecionador).map(([texto, caminho], index) => (
+                        <a href={caminho} key={index}>{texto}</a>
+                    ))
+                    }
+                </div> : null
+            }
         </nav>
     );
 }

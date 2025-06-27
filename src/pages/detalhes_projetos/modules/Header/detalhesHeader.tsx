@@ -8,7 +8,7 @@ interface props {
 
 const DetalheHeader: React.FC<props> = ({ titulo, type }) => {
     return (
-        <section className="DetalheHeader Flex-Center">
+        <section className="DetalheHeader Flex-Center" id='DetalhesHeader'>
             <h1>{titulo}</h1>
             <h5>{type}</h5>
         </section>

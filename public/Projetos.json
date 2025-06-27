@@ -13,88 +13,11 @@
             "Figma"
         ],
         "imagens": [
-            "DefaultImage.png",
-            "DefaultImage.png",
-            "DefaultImage.png",
-            "DefaultImage.png",
-            "DefaultImage.png",
-            "DefaultImage.png",
-            "DefaultImage.png",
-            "DefaultImage.png",
-            "DefaultImage.png",
             "DefaultImage.png"
         ],
         "tempo": "1 sem.",
         "responsivo": true,
         "dificuldade": "5",
         "linkRepósitorio": ""
-    },
-    "teste2": {
-        "nome": "Teste",
-        "type": "Full",
-        "descricao": {
-            "resumo": "Resumo teste",
-            "problemaResolvido": "Promblema resolvido Teste",
-            "desafios": "Desafios Teste"
-        },
-        "tecnologias": [
-            "CSS",
-            "Express.js",
-            "Figma"
-        ],
-        "imagens": [
-            "DefaultImage.png"
-        ]
-    },
-    "teste3": {
-        "nome": "Teste",
-        "type": "Full",
-        "descricao": {
-            "resumo": "Resumo teste",
-            "problemaResolvido": "Promblema resolvido Teste",
-            "desafios": "Desafios Teste"
-        },
-        "tecnologias": [
-            "CSS",
-            "Express.js",
-            "Figma"
-        ],
-        "imagens": [
-            "DefaultImage.png"
-        ]
-    },
-    "teste4": {
-        "nome": "Teste",
-        "type": "Full",
-        "descricao": {
-            "resumo": "Resumo teste",
-            "problemaResolvido": "Promblema resolvido Teste",
-            "desafios": "Desafios Teste"
-        },
-        "tecnologias": [
-            "CSS",
-            "Express.js",
-            "Figma"
-        ],
-        "imagens": [
-            "DefaultImage.png"
-        ]
-    },
-    "teste5": {
-        "nome": "Teste",
-        "type": "Full",
-        "descricao": {
-            "resumo": "Resumo teste",
-            "problemaResolvido": "Promblema resolvido Teste",
-            "desafios": "Desafios Teste"
-        },
-        "tecnologias": [
-            "CSS",
-            "Express.js",
-            "Figma"
-        ],
-        "imagens": [
-            "DefaultImage.png"
-        ]
     }
 }

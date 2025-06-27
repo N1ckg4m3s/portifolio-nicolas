@@ -10,7 +10,7 @@ interface props {
 
 const DetalheTecnologiasUsadas: React.FC<props> = ({ tecnologias }) => {
     return (
-        <section className="DetalhesTecnologias Flex-Center">
+        <section className="DetalhesTecnologias Flex-Center" id="DetalhesTecnologias">
             <TituloSection texto={'tecnologias'} />
 
             <Carousel

@@ -35,7 +35,11 @@ const DetalheProjetos: React.FC = () => {
 
     return (
         <div className="MainContainer Flex-Center">
-            <NavBar />
+            <NavBar redirecionador={{
+                "Sobre": "#DetalhesSobre",
+                "Tecnologias": "#DetalhesTecnologias",
+                "Imagens": "#DetalhesImagens",
+            }} />
             <DetalheHeader titulo={projetoMostrar.nome} type={projetoMostrar.type} />
             <div className="containerProjeto">
                 <DetalheSobre

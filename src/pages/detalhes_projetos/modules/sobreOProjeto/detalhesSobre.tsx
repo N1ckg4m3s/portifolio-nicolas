@@ -16,7 +16,7 @@ interface props extends descricaoProjeto {
 
 function DetalheSobre(informacoes: props) {
     return (
-        <section className="DetalheSobre Flex-Center">
+        <section className="DetalheSobre Flex-Center" id="DetalhesSobre">
             <TituloSection texto={'SOBRE O PRPROJETO'} />
             <article>
                 <div className="descricoesSobre">

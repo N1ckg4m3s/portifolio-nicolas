@@ -28,7 +28,13 @@ const MainPortifolio: React.FC = () => {
 
     return (
         <div className="MainContainer Flex-Center">
-            <NavBar />
+            <NavBar redirecionador={{
+                "Sobre": "#MainSobre",
+                "Tecnologias": "#MainTecnologias",
+                "projetos": "/projetos",
+                "estudos": "#MainEscolaridade",
+                "contato": "#MainContato",
+            }} />
             <MainHeader />
             <div className="containerProjeto">
                 <SobreMim quantidadeDeProjetos={quantidadeDeProjetos} />

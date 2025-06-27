@@ -54,7 +54,9 @@ const ProjetosPaginados: React.FC = () => {
 
     return (
         <div className="MainContainer Flex-Center ProjetosContainer">
-            <NavBar />
+            <NavBar redirecionador={{
+
+            }} />
             <TituloSection texto={'Projetos'} />
             <div
                 className="containerProjeto gradeProjetos"
