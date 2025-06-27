@@ -1,0 +1,15 @@
+.ProjetosContainer {
+    margin: 80px 30px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ProjetosContainer .tituloSelection {
+    align-self: flex-start;
+}
+
+.gradeProjetos {
+    display: grid;
+    grid-template-columns: repeat(var(--quantidade), 1fr);
+    gap: 5px;
+}

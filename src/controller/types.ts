@@ -3,7 +3,7 @@ export interface carouselProps {
     images?: string[]; // Caminho das imagens
     iconesEspecificos?: string[]; // Lista de ícones específicos (se fornecida)
     dadosCard?: Map<string, resumoProjeto>; // Dados para construir os cards
-    build?: (item: resumoProjeto, index: string) => React.ReactNode; // Função para construir cards
+    build?: (item: resumoProjeto, index: string, i: number) => React.ReactNode; // Função para construir cards
     maxheight: number; // tamanho que o component vai ter
 }
 

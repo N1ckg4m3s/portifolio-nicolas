@@ -29,7 +29,9 @@ function DetalheSobre(informacoes: props) {
                 <div className='cardsInformacoes Flex-Center'>
                     <SimpleCard tittle='Tempo' value={informacoes.tempo} />
                     <SimpleCard tittle='Responsivo' value={informacoes.responsivo ? "SIM" : 'NÃO'} />
-                    <Link to={informacoes.repositorio}>
+                    <Link to={informacoes.repositorio}
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <SimpleCard tittle='Repositorio' value={<GitHub />} />
                     </Link>
                     <SimpleCard tittle='Dificuldade' value={`${informacoes.dificuldade}/10`} />

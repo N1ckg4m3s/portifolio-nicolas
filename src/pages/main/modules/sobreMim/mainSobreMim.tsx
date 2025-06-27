@@ -7,7 +7,11 @@ import SimpleCard from "../../../../components/simpleCard/simpleCard";
 
 import { ReactComponent as GitHub } from '../../../../assets/icons/GitHub_icon.svg'
 
-const mainSobreMim: React.FC = () => {
+interface props {
+    quantidadeDeProjetos: number;
+}
+
+const mainSobreMim: React.FC<props> = ({ quantidadeDeProjetos }) => {
     return <section className='sobreMim' id="MainSobre">
         <TituloSection
             texto={'sobre mim'}
@@ -22,10 +26,12 @@ const mainSobreMim: React.FC = () => {
             <div className='cardsInformacoes Flex-Center'>
                 <SimpleCard tittle='experiência' value='3y+' />
                 <SimpleCard tittle='cursos' value='5+' />
-                <Link to='https://github.com/N1ckg4m3s'>
+                <Link to='https://github.com/N1ckg4m3s'
+                    target="_blank"
+                    rel="noopener noreferrer">
                     <SimpleCard tittle='N1ckg4m3s' value={<GitHub />} />
                 </Link>
-                <SimpleCard tittle='projetos' value='##' />
+                <SimpleCard tittle='projetos' value={quantidadeDeProjetos} />
             </div>
         </article>
     </section>

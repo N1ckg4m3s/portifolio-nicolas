@@ -13,12 +13,12 @@ import { ReactComponent as Mongo } from '../../assets/iconsTecnologias/Mongo.svg
 import { ReactComponent as Node } from '../../assets/iconsTecnologias/Node.svg';
 import { ReactComponent as Postgree } from '../../assets/iconsTecnologias/Postgree.svg';
 import { ReactComponent as Python } from '../../assets/iconsTecnologias/Python.svg';
-import { ReactComponent as React_icon } from '../../assets/iconsTecnologias/React.svg';
+import { ReactComponent as ReactIcon } from '../../assets/iconsTecnologias/React.svg';
 import { ReactComponent as SqlSer } from '../../assets/iconsTecnologias/SqlSer.svg';
 import { ReactComponent as Ts } from '../../assets/iconsTecnologias/Ts.svg';
 import { ReactComponent as Vsc } from '../../assets/iconsTecnologias/Vsc.svg';
 import { ReactComponent as Vue } from '../../assets/iconsTecnologias/Vue.svg';
-import { carouselProps, iconsMap, resumoProjeto } from "../../controller/types";
+import { carouselProps, iconsMap } from "../../controller/types";
 
 const iconesMap: iconsMap = new Map([
     ['CSS', <Css />],
@@ -32,7 +32,7 @@ const iconesMap: iconsMap = new Map([
     ['Node.js', <Node />],
     ['PostgreSQL', <Postgree />],
     ['Python', <Python />],
-    ['React', <React_icon />],
+    ['React', <ReactIcon />],
     ['SQL Server', <SqlSer className="SvgWhite-fill" />],
     ['TypeScript', <Ts />],
     ['V.S.Code', <Vsc />],
@@ -59,42 +59,53 @@ const Carousel: React.FC<carouselProps> = ({ type, iconesEspecificos, dadosCard,
     useEffect(() => {
         const updateItems = () => {
             const itemsPerRow = calculateItemsPerRow();
-            const imagens = images?.length ? images : Array.from(iconesMap.keys());
-            const icons = iconesEspecificos?.length ? iconesEspecificos : Array.from(iconesMap.keys());
-            const cards = dadosCard ? Array.from(dadosCard.entries()).map((item, _) => {
-                const index: string = item[0];
-                const projeto: resumoProjeto = item[1];
-                return build ? build(projeto, index) : (
-                    <div key={index} className="cardTeste"> - == ERROR == - </div>
-                );
-            }) : [];
 
-            // Verifica se a quantidade de itens excede o número de itens que cabem na tela
-            const itemsToCheck = type === 'icons' ? icons.length : type === 'images' ? imagens.length : cards.length;
-            if (itemsToCheck > itemsPerRow) {
-                setShouldAnimate(true);
-                setImagesToRender([...imagens, ...imagens]); // Duplicar ícones ou cards
-                setIconsToRender([...icons, ...icons]); // Duplicar ícones ou cards
-                setCardsToRender([...cards, ...cards]); // Duplicar também os cards
-            } else {
-                setShouldAnimate(false);
-                setImagesToRender(imagens);
-                setIconsToRender(icons);
+            // ===== ICONES =====
+            const icons = iconesEspecificos?.length ? iconesEspecificos : Array.from(iconesMap.keys());
+            const shouldDuplicateIcons = icons.length > itemsPerRow;
+            setIconsToRender(shouldDuplicateIcons ? [...icons, ...icons] : icons);
+
+            // ===== IMAGENS =====
+            const imagens = images?.length ? images : Array.from(iconesMap.keys());
+            const shouldDuplicateImages = imagens.length > itemsPerRow;
+            setImagesToRender(shouldDuplicateImages ? [...imagens, ...imagens] : imagens);
+
+            // ===== CARDS =====
+            let cards: React.ReactNode[] = [];
+
+            let shouldDuplicateCards: boolean = false
+            if (dadosCard) {
+                const entries = Array.from(dadosCard.entries());
+                shouldDuplicateCards = entries.length > itemsPerRow;
+                const duplicatedEntries = shouldDuplicateCards ? [...entries, ...entries] : entries;
+
+                cards = duplicatedEntries.map(([index, projeto], i) => {
+                    return build
+                        ? build(projeto, index, i)
+                        : <div key={`card-erro-${index}-${i}`} className="cardTeste"> - == ERROR == - </div>;
+                });
+
                 setCardsToRender(cards);
+            } else {
+                setCardsToRender([]);
             }
+            setShouldAnimate(
+                (type === 'icons' && shouldDuplicateIcons) ||
+                (type === 'images' && shouldDuplicateImages) ||
+                (type === 'card' && shouldDuplicateCards));
         };
 
-        // Calcular a quantidade de itens na primeira renderização
+        // Primeira renderização
         updateItems();
 
-        // Adicionar um ouvinte de resize para recalcular a quantidade de itens
+        // Recalcular ao redimensionar a tela
         window.addEventListener('resize', updateItems);
 
-        // Limpar o ouvinte de resize quando o componente for desmontado
         return () => {
             window.removeEventListener('resize', updateItems);
         };
-    }, [type, iconesEspecificos, dadosCard, build]);
+    }, [type, iconesEspecificos, dadosCard, build, images]);
+
 
     return (
         <div className="carouselContainer Flex-Center" ref={containerRef} style={{ maxHeight: maxheight }}>
